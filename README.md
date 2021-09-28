@@ -1,4 +1,35 @@
-# Vertical Alignment within MJML
+# WorkWell Weekly Newsletter
+
+# Completed Work
+
+
+# Original Email
+Click the preview below to view the original email
+
+<a href="./img/original-email.png" ><img src="./img/original-email_th.png"></a>
+
+# Notes
+
+## CSS-Class element
+A quirk about this framework is the ability to change css properties for media queries. I cann't find it, so I have to do this the old fashioned way - using a CSS Media query. What I'm focusing on is the first image under the "What We're Reading" header. It has a padding on the left in the desktop version. When switched to mobile, the padding remains. 
+Here is the code to fix this issue, which includes using the `css-class` attribute. I decided to add a unique class to that picture to target it.
+
+```mjml
+<mj-column vertical-align="middle" width="300px">
+    <mj-image src="./img/art.png" alt="Artwork" padding="0 0 0 30px" css-class="artwork" />
+      
+</mj-column>
+
+```
+@media only screen and (max-width:480px){
+    .artwork{
+        padding:0 0 20px 0 !important;
+    }
+}
+
+```css
+
+## Vertical Alignment within MJML
 Seems like in order to achieve the middle style vertical alignment, **all** the columns in the "affected" area need to also have the same style `vertical-align=middle` added to the mj-column element
 
 [See Here for Example](https://mjml.io/try-it-live/wvegjOqTmL8)
@@ -21,14 +52,14 @@ Seems like in order to achieve the middle style vertical alignment, **all** the 
 
 In the case above, there are 2 columns, and I wanted the picture to be in the middle of the column. At first, I was only targeting the first column, but the second column was by default, set to **top**. Once I set both columns to `vertical-align=middle`, it achieved the desired style.
 
-# Setting Width for the content container
+## Setting Width for the content container
 By setting the `mj-body` tag with a new width value, you can override the default 600px width of the email's body. This is a requirement for this particular newsletter, as the original is set to a width of 640px.
 
-# Footer
+## Footer
 To include a footer, simply use the `include` tag.
 **Important** Seems like the font-sizing wasn't respected when added directly to the `mj-text` element, so adding those properties to the CSS fixed the issue.
 
-```
+```mjml
 <!-- Inside the main template-->
 <mj-include path="./footer.mjml" />
 

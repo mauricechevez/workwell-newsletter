@@ -52,3 +52,9 @@ p{
 .footer-text > a{
     color: #000000 !important;
 }
+
+@media only screen and (max-width:480px){
+    .artwork{
+        padding:0 0 20px 0 !important;
+    }
+}
