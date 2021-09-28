@@ -1,0 +1,54 @@
+/* *{
+    --bg-beige:#f2ebdf;
+    --salmon:#e68383;
+    --aqua: #2ecfcf;
+} */
+
+h1{
+    font-size: 36px;
+    color: #e68383;
+}
+
+h2{
+    font-size: 30px;
+    color: #e68383;
+}
+
+h3{
+    color: #2ecfcf;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+}
+
+img.artwork{
+    vertical-align: middle !important;
+}
+
+p{
+    font-size: 16px;
+}
+.sub-headline{
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+}
+
+.semi-bold{
+    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+}
+
+.emoji{
+    width:20px;
+    vertical-align:middle;
+}
+
+.link{
+    font-weight:bold;
+}
+.footer-text{
+    font-size: 12px !important;
+    line-height: 1.4;
+}
+.footer-text > a{
+    color: #000000 !important;
+}
